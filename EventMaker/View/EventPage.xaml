@@ -5,9 +5,25 @@
     
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:EventMaker.ViewModel"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <viewModel:EventViewModel/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="582*"/>
+            <ColumnDefinition Width="518*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="101*"/>
+        </Grid.RowDefinitions>
+        <ListView  Background="red" HorizontalAlignment="Left" Height="625" VerticalAlignment="Top" Width="436" ItemsSource="{Binding  Singleton.EventList }" Margin="132,0,0,0" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="1"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Height="20" Width="15"/>
 
     </Grid>
 </Page>
