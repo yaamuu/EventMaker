@@ -8,11 +8,11 @@ namespace EventMaker.Model
 {
     class Event
     {
-        private int Id;
-        private string Name;
-        private string Description;
-        private string Place;
-        private DateTime DateTime;
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Place { get; set; }
+        public DateTime DateTime { get; set; }
 
         public Event(int id, string name, string description, string place, DateTime datetime)
         {

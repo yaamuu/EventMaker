@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:EventMaker.ViewModel"
+    xmlns:model="using:EventMaker.Model"
     mc:Ignorable="d">
 
     <Page.DataContext>
@@ -13,17 +14,40 @@
     </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="31*"/>
-            <ColumnDefinition Width="149*"/>
-            <ColumnDefinition Width="582*"/>
-            <ColumnDefinition Width="518*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="101*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ListView  Background="red" HorizontalAlignment="Left" Height="625" VerticalAlignment="Top" Width="436" ItemsSource="{Binding  Singleton.EventList }" Margin="132,0,0,0" Grid.Column="2" Grid.RowSpan="2"/>
-        <TextBlock Grid.Column="1"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Height="20" Width="15"/>
+        <ListView ItemsSource="{Binding Singleton.EventList}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="ID = "></TextBlock>
+                        <TextBlock Text="{Binding Id }"></TextBlock> 
+                        <TextBlock Text=" Name = "></TextBlock>
+                        <TextBlock Text="{Binding Name }"></TextBlock>
+                        <TextBlock Text=" Description = "></TextBlock>
+                        <TextBlock Text="{Binding Description }"></TextBlock>
+                        <TextBlock Text=" Place = "></TextBlock>
+                        <TextBlock Text="{Binding Place }"></TextBlock>
+                        <TextBlock Text=" Time = "></TextBlock>
+                        <TextBlock Text="{Binding DateTime }"></TextBlock>
+                    </StackPanel>
+                        
+                   
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Add Event" Click="ButtonBase_OnClick"></Button>
+
 
     </Grid>
+
+    
+    
 </Page>
