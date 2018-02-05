@@ -14,12 +14,12 @@ namespace EventMaker.ViewModel
 {
     class EventViewModel:INotifyPropertyChanged
     {
-       public int Id { get; }
-        public string Name { get; }
-        public string Description { get; }
-        public string Place { get; }
-        public DateTimeOffset Date { get; }
-        public TimeSpan Time { get; }
+       public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Place { get; set; }
+        public DateTimeOffset Date { get; set; }
+        public TimeSpan Time { get; set; }
         public Handler.EventHandler EventHandler { get; set; }
         private ICommand _createEventCommand;
 
@@ -28,6 +28,7 @@ namespace EventMaker.ViewModel
             get { return _createEventCommand; }
             set { _createEventCommand = value; }
         }
+        public RelayCommand CreateCommand { get; set; }
 
         public EventCatalogSingleton Singleton { get; set; }
         public EventViewModel()
@@ -37,7 +38,7 @@ namespace EventMaker.ViewModel
             Date = new DateTimeOffset(dt.Year,dt.Month,dt.Day,0,0,0,0,new TimeSpan());
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             EventHandler = new Handler.EventHandler(this);
-            RelayCommand createCommand = new RelayCommand(EventHandler.CreateEvent);
+             CreateCommand = new RelayCommand(EventHandler.CreateEvent);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

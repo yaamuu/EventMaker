@@ -31,18 +31,18 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Name" FontSize="30"/>
-                    <TextBox Text="{Binding Id, Mode=TwoWay}" />
+                    <TextBox Text="{Binding Name, Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Description" FontSize="30"/>
-                    <TextBox Text="{Binding Id, Mode=TwoWay}" />
+                    <TextBox Text="{Binding Description, Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Place" FontSize="30"/>
 
-                    <TextBox Text="{Binding Id, Mode=TwoWay}" />
+                    <TextBox Text="{Binding Place, Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
@@ -58,7 +58,7 @@
                     <TimePicker Time="{Binding Time, Mode=TwoWay}"/>
 
                 </StackPanel>
-                <Button Content="Add" Command="{Binding CreateEventCommand}"/>
+                <Button Content="Add" Command="{Binding CreateCommand}"/>
                 <Button Content="Main Page" Click="ButtonBase_OnClick"/>
                 
             </StackPanel>

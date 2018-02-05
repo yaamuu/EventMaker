@@ -23,9 +23,6 @@ namespace EventMaker.Model
             DateTime = datetime;
         }
 
-        public override string ToString()
-        {
-            return Id + Name + Description + Place + DateTime;
-        }
+      
     }
 }
