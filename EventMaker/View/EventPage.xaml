@@ -26,7 +26,7 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="2.5*"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding Singleton.EventList}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="10,0,852,0" Grid.ColumnSpan="2" Width="418">
+        <ListView ItemsSource="{Binding Singleton.EventList}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="10,0,852,0" Grid.ColumnSpan="2" Width="418">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" Margin="0,0,0,30">
@@ -54,9 +54,12 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+    <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
+            <Button Content="Delete Event" Command="{Binding DeleteItemCommand}"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
 
-        <Button Content="Add Event" Click="ButtonBase_OnClick" Height="33" Grid.Column="1" Grid.Row="2" Width="89" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
-
+        </StackPanel>
+        
 
 
     </Grid>
