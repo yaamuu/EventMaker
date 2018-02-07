@@ -16,9 +16,9 @@ namespace EventMaker.Model
         {
             EventList = new ObservableCollection<Event>();
 
-            EventList.Add(new Event(1, "Event1", "First event", "place1", new DateTime(2018, 2, 10)));
-            EventList.Add(new Event(2, "Event2", "secound event", "place2", new DateTime(2018, 3, 20)));
-            EventList.Add(new Event(3, "Event3", "third event", "place3", new DateTime(2018, 5, 13)));
+            EventList.Add(new Event(1, "Marcins Birthday", "He is turning 21 ", "Dieselvej 2", new DateTime(2018, 5, 9)));
+            EventList.Add(new Event(2, "Antonios Funeral", "Act sad", "Sandraekkerne 6", new DateTime(2018, 1, 7)));
+            EventList.Add(new Event(3, "Drinks with Jamshid", "Get smashed", "Mulagins Pub", new DateTime(2018, 2, 4)));
         }
 
         public static EventCatalogSingleton GetInstance()

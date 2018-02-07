@@ -17,49 +17,49 @@
             <ImageBrush Stretch="Fill" ImageSource="../Assets/background1.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="4*"/>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.8*"/>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="2.0*"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding Singleton.EventList}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="10,0,852,0" Grid.ColumnSpan="2" Width="418">
+        <ListView ItemsSource="{Binding Singleton.EventList}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="52,0.5,0,82" Width="548" Grid.RowSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" Margin="0,0,0,30">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="ID=" Margin="0,0,20,0"/>
-                            <TextBlock Text="{Binding Id }"></TextBlock>
+                            <TextBlock Text="ID  =" Margin="0,0,128,0" FontFamily="Lucida Handwriting" FontSize="24"/>
+                            <TextBlock Text="{Binding Id }" FontSize="24"></TextBlock >
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Name =                    "/>
-                            <TextBlock Text="{Binding Name }"></TextBlock>
+                            <TextBlock Text="Name  ="  FontFamily="Lucida Handwriting" Margin="0,0,82,0" FontSize="24"/>
+                            <TextBlock Text="{Binding Name }" FontSize="24"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Description  = "  FontFamily="Lucida Handwriting" Margin="0,0,8,0" FontSize="24"/>
+                            <TextBlock Text="{Binding Description }" FontSize="24"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Description =                    "/>
-                            <TextBlock Text="{Binding Description }"></TextBlock>
+                            <TextBlock Text="Place  = "  FontFamily="Lucida Handwriting" Margin="0,0,88,0" FontSize="24"/>
+                            <TextBlock Text="{Binding Place }" FontSize="24"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Place =                    "/>
-                            <TextBlock Text="{Binding Place }"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Time =                    "/>
-                            <TextBlock Text="{Binding DateTime }"></TextBlock>
+                            <TextBlock Text="Time  = "  FontFamily="Lucida Handwriting" Margin="0,0,96,0" FontSize="24"/>
+                            <TextBlock Text="{Binding DateTime }" FontSize="24"></TextBlock>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Grid.Column="1" Grid.Row="2">
-    <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
+            <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
             <Button Content="Delete Event" Command="{Binding DeleteItemCommand}"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
 
         </StackPanel>
-        
+
 
 
     </Grid>
