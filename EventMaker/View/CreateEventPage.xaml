@@ -13,43 +13,45 @@
             <ImageBrush Stretch="Fill" ImageSource="../Assets/background1.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="687*"/>
-            <RowDefinition Height="113*"/>
+            <RowDefinition Height="131*"/>
+            
+            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="207*"/>
-            <ColumnDefinition Width="817*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="241*"/>
+            <ColumnDefinition Width="1256*"/>
         </Grid.ColumnDefinitions>
         <Grid.DataContext>
             <ViewModel:EventViewModel/>
         </Grid.DataContext>
-        <StackPanel  Grid.Column="2" Grid.Row="1" Margin="0.5,0,-1,0">
-            <TextBlock Text="Id" FontSize="36"/>
-            <TextBox Text="{Binding Id, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left"  />
+        <StackPanel  Grid.Column="2" Grid.Row="1" Margin="0,0,0,-125" Height="853" VerticalAlignment="Bottom">
+            <TextBlock Text="Id" FontSize="36" FontFamily="Lucida Handwriting"/>
+            <TextBox Text="{Binding Id, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" FontFamily="Lucida Handwriting"  />
 
-            <TextBlock Text="Name" FontSize="36"  />
-            <TextBox Text="{Binding Name, Mode=TwoWay}" Height="40" Width="296"  HorizontalAlignment="Left" />
+            <TextBlock Text="Name" FontSize="36" FontFamily="Lucida Handwriting"  />
+            <TextBox Text="{Binding Name, Mode=TwoWay}" Height="40" Width="296"  HorizontalAlignment="Left" FontFamily="Lucida Handwriting"/>
 
-            <TextBlock Text="Description" FontSize="36"  />
-            <TextBox Text="{Binding Description, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left"   />
+            <TextBlock Text="Description" FontSize="36" FontFamily="Lucida Handwriting"  />
+            <TextBox Text="{Binding Description, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left"  FontFamily="Lucida Handwriting"  />
 
-            <TextBlock Text="Place" FontSize="36" />
-            <TextBox Text="{Binding Place, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" />
+            <TextBlock Text="Place" FontSize="36" FontFamily="Lucida Handwriting"/>
+            <TextBox Text="{Binding Place, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" FontFamily="Lucida Handwriting" />
 
-            <TextBlock Text="Date" FontSize="36"  />
+            <TextBlock Text="Date" FontSize="36" FontFamily="Lucida Handwriting"  />
             <DatePicker Date="{Binding Date, Mode=TwoWay}" Width="296" HorizontalAlignment="Left"  />
 
-            <TextBlock Text="Time" FontSize="36" />
+            <TextBlock Text="Time" FontSize="36" FontFamily="Lucida Handwriting" />
             <TimePicker Time="{Binding Time, Mode=TwoWay}" Width="296" HorizontalAlignment="Left" />
+
+            <Button Content="Add" Command="{Binding CreateCommand}" Click="ButtonBase_OnClick2" Margin="0,25,0,15" Width="295" Height="40"/>
+            <Button Content="Main Page" Click="ButtonBase_OnClick" Width="295" Height="40"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Margin="552.5,0,552,0" Width="90">
-            <Button Content="Add" Command="{Binding CreateCommand}" Click="ButtonBase_OnClick2"/>
-            <Button Content="Main Page" Click="ButtonBase_OnClick"/>
-        </StackPanel>
 
+        <StackPanel Grid.Column="1" Grid.RowSpan="2" Margin="550,82,0,110" Grid.ColumnSpan="2" >
+            <Image Source="../Assets/calander1.jpg" Width="650" Height="650"></Image>
+        </StackPanel>
 
 
 

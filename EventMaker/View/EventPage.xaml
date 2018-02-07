@@ -54,8 +54,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <StackPanel Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="667,378,0,0" Canvas.ZIndex="1">
-            <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33000000" Width="150"></Button>
+        <StackPanel Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="667,363,0,0" Canvas.ZIndex="1">
+            <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33000000" Width="150" Margin="0,0,0,20"></Button>
             <Button Content="Delete Event" Command="{Binding DeleteItemCommand}"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33000000" Width="150"></Button>
         </StackPanel>
        
