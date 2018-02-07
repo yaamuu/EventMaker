@@ -31,7 +31,7 @@
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" Margin="0,0,0,30">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="ID =                    "/>
+                            <TextBlock Text="ID=" Margin="0,0,20,0"/>
                             <TextBlock Text="{Binding Id }"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
