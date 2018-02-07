@@ -12,41 +12,55 @@
     <Page.DataContext>
         <viewModel:EventViewModel/>
     </Page.DataContext>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="../Assets/background1.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-           
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="9*"/>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.8*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2.5*"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding Singleton.EventList}" >
+        <ListView ItemsSource="{Binding Singleton.EventList}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,0,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="ID = "></TextBlock>
-                        <TextBlock Text="{Binding Id }"></TextBlock> 
-                        <TextBlock Text=" Name = "></TextBlock>
-                        <TextBlock Text="{Binding Name }"></TextBlock>
-                        <TextBlock Text=" Description = "></TextBlock>
-                        <TextBlock Text="{Binding Description }"></TextBlock>
-                        <TextBlock Text=" Place = "></TextBlock>
-                        <TextBlock Text="{Binding Place }"></TextBlock>
-                        <TextBlock Text=" Time = "></TextBlock>
-                        <TextBlock Text="{Binding DateTime }"></TextBlock>
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,20">
+                        <TextBlock Text="ID =       "/>
+                        <TextBlock Text="Name = "></TextBlock>
+                        <TextBlock Text="Description = "></TextBlock>
+                        <TextBlock Text="Place = "></TextBlock>
+                        <TextBlock Text="Time = "></TextBlock>
                     </StackPanel>
-                        
-                   
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Content="Add Event" Click="ButtonBase_OnClick"></Button>
+
+        <ListView ItemsSource="{Binding Singleton.EventList}" Grid.Column="1" Grid.Row="1"  Margin="1,0,13,47">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,20 ">
+                        <TextBlock Text="{Binding Id }"></TextBlock>
+                        <TextBlock Text="{Binding Name }"></TextBlock>
+                        <TextBlock Text="{Binding Description }"></TextBlock>
+                        <TextBlock Text="{Binding Place }"></TextBlock>
+                        <TextBlock Text="{Binding DateTime }"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Content="Add Event" Click="ButtonBase_OnClick" Height="33" Grid.Column="1" Grid.Row="1" Width="89" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
+
 
 
     </Grid>
 
-    
-    
+
+
 </Page>

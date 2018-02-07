@@ -27,7 +27,7 @@ namespace EventMaker.Handler
         {
             DateTime date = DateTimeConventer.ConverterDateTime(EventViewModel.Date, EventViewModel.Time);
             EventCatalogSingleton singleton = new EventCatalogSingleton();
-            singleton.EventList.Add(new Event(EventViewModel.Id, EventViewModel.Name, EventViewModel.Description, EventViewModel.Place, date ));
+            EventViewModel.Singleton.EventList.Add(new Event(EventViewModel.Id, EventViewModel.Name, EventViewModel.Description, EventViewModel.Place, date ));
         }
 
     }

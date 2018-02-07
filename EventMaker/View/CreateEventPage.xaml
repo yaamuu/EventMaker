@@ -8,16 +8,19 @@
     x:Class="EventMaker.View.CreateEventPage"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="../Assets/background1.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="207*"/>
+            <ColumnDefinition Width="817*"/>
         </Grid.ColumnDefinitions>
         <Grid.DataContext>
             <ViewModel:EventViewModel/>
@@ -25,42 +28,42 @@
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Id" FontSize="30" />
-                    <TextBox Text="{Binding Id, Mode=TwoWay}" />
+                    <TextBlock Text="Id" FontSize="40" />
+                    <TextBox Text="{Binding Id, Mode=TwoWay}" Height="40"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Name" FontSize="30"/>
-                    <TextBox Text="{Binding Name, Mode=TwoWay}" />
+                    <TextBlock Text="Name" FontSize="40"/>
+                    <TextBox Text="{Binding Name, Mode=TwoWay}" Height="40"  />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Description" FontSize="30"/>
-                    <TextBox Text="{Binding Description, Mode=TwoWay}" />
+                    <TextBlock Text="Description" FontSize="40"/>
+                    <TextBox Text="{Binding Description, Mode=TwoWay}" Height="40"  />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Place" FontSize="30"/>
+                    <TextBlock Text="Place" FontSize="40"/>
 
-                    <TextBox Text="{Binding Place, Mode=TwoWay}" />
+                    <TextBox Text="{Binding Place, Mode=TwoWay}" Height="40"  />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Date" FontSize="30"/>
+                    <TextBlock Text="Date" FontSize="40"/>
 
                     <DatePicker Date="{Binding Date, Mode=TwoWay}"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
 
-                    <TextBlock Text="Time" FontSize="30"/>
+                    <TextBlock Text="Time" FontSize="40"/>
 
                     <TimePicker Time="{Binding Time, Mode=TwoWay}"/>
 
                 </StackPanel>
                 <Button Content="Add" Command="{Binding CreateCommand}"/>
                 <Button Content="Main Page" Click="ButtonBase_OnClick"/>
-                
+
             </StackPanel>
 
         </StackPanel>

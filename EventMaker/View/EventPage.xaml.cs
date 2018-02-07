@@ -31,5 +31,10 @@ namespace EventMaker.View
         {
             Frame.Navigate(typeof(CreateEventPage));
         }
+
+        private void ListView_SelectionChanged()
+        {
+
+        }
     }
 }
