@@ -28,16 +28,10 @@ namespace EventMaker.Handler
         public async void CreateEvent()
         {
             DateTime date = DateTimeConventer.ConverterDateTime(EventViewModel.Date, EventViewModel.Time);
-            if (EventViewModel.)
-            {
+         
                 EventViewModel.Singleton.EventList.Add(new Event(EventViewModel.Id, EventViewModel.Name,
                     EventViewModel.Description, EventViewModel.Place, date));
-            }
-            else
-            {
-                var dialog = new MessageDialog("Your message here");
-                await dialog.ShowAsync();
-            }
+           
             
         }
 
