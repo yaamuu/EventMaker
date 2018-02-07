@@ -11,7 +11,7 @@ namespace EventMaker.Model
     {
         private static EventCatalogSingleton instance  ;
        public ObservableCollection<Event> EventList { get; set; }
-
+        
         public EventCatalogSingleton()
         {
             EventList = new ObservableCollection<Event>();
@@ -32,6 +32,7 @@ namespace EventMaker.Model
                 return instance;
             
         }
-        
+      
+
     }
 }

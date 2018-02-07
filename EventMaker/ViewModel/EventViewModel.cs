@@ -22,6 +22,8 @@ namespace EventMaker.ViewModel
         public TimeSpan Time { get; set; }
         public Handler.EventHandler EventHandler { get; set; }
         private ICommand _createEventCommand;
+        private Event _selectedItem;
+        public RelayCommand DeleteItemCommand { get; set; }
 
         public ICommand CreateEventCommand
         {
@@ -39,6 +41,7 @@ namespace EventMaker.ViewModel
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             EventHandler = new Handler.EventHandler(this);
              CreateCommand = new RelayCommand(EventHandler.CreateEvent);
+            DeleteItemCommand = new RelayCommand(EventHandler.DeleteEvent);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -47,6 +50,16 @@ namespace EventMaker.ViewModel
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public Event SelectedItem
+        {
+            get => _selectedItem;
+            set
+            {
+                _selectedItem = value;
+                OnPropertyChanged(nameof(SelectedItem));
+            }
         }
     }
 }
