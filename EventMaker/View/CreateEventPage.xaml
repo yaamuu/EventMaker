@@ -13,60 +13,46 @@
             <ImageBrush Stretch="Fill" ImageSource="../Assets/background1.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="687*"/>
+            <RowDefinition Height="113*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="207*"/>
             <ColumnDefinition Width="817*"/>
         </Grid.ColumnDefinitions>
         <Grid.DataContext>
             <ViewModel:EventViewModel/>
         </Grid.DataContext>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-            <StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Id" FontSize="40" />
-                    <TextBox Text="{Binding Id, Mode=TwoWay}" Height="40"/>
-                </StackPanel>
+        <StackPanel  Grid.Column="2" Grid.Row="1" Margin="0.5,0,-1,0">
+            <TextBlock Text="Id" FontSize="36"/>
+            <TextBox Text="{Binding Id, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left"  />
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Name" FontSize="40"/>
-                    <TextBox Text="{Binding Name, Mode=TwoWay}" Height="40"  />
-                </StackPanel>
+            <TextBlock Text="Name" FontSize="36"  />
+            <TextBox Text="{Binding Name, Mode=TwoWay}" Height="40" Width="296"  HorizontalAlignment="Left" />
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Description" FontSize="40"/>
-                    <TextBox Text="{Binding Description, Mode=TwoWay}" Height="40"  />
-                </StackPanel>
+            <TextBlock Text="Description" FontSize="36"  />
+            <TextBox Text="{Binding Description, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left"   />
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Place" FontSize="40"/>
+            <TextBlock Text="Place" FontSize="36" />
+            <TextBox Text="{Binding Place, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" />
 
-                    <TextBox Text="{Binding Place, Mode=TwoWay}" Height="40"  />
-                </StackPanel>
+            <TextBlock Text="Date" FontSize="36"  />
+            <DatePicker Date="{Binding Date, Mode=TwoWay}" Width="296" HorizontalAlignment="Left"  />
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Date" FontSize="40"/>
-
-                    <DatePicker Date="{Binding Date, Mode=TwoWay}"/>
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal">
-
-                    <TextBlock Text="Time" FontSize="40"/>
-
-                    <TimePicker Time="{Binding Time, Mode=TwoWay}"/>
-
-                </StackPanel>
-                <Button Content="Add" Command="{Binding CreateCommand}"/>
-                <Button Content="Main Page" Click="ButtonBase_OnClick"/>
-
-            </StackPanel>
-
+            <TextBlock Text="Time" FontSize="36" />
+            <TimePicker Time="{Binding Time, Mode=TwoWay}" Width="296" HorizontalAlignment="Left" />
         </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Margin="552.5,0,552,0" Width="90">
+            <Button Content="Add" Command="{Binding CreateCommand}" Click="ButtonBase_OnClick2"/>
+            <Button Content="Main Page" Click="ButtonBase_OnClick"/>
+        </StackPanel>
+
+
+
+
 
     </Grid>
 </Page>

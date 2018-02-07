@@ -31,5 +31,11 @@ namespace EventMaker.View
         {
             Frame.Navigate(typeof(EventPage));
         }
+
+        private void ButtonBase_OnClick2(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(EventPage));
+        }
+
     }
 }
