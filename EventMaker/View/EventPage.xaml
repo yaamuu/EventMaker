@@ -54,12 +54,14 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <StackPanel Grid.Column="1" Grid.Row="2">
-            <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
-            <Button Content="Delete Event" Command="{Binding DeleteItemCommand}"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FFFFFF"></Button>
-
+        <StackPanel Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="667,378,0,0" Canvas.ZIndex="1">
+            <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33000000" Width="150"></Button>
+            <Button Content="Delete Event" Command="{Binding DeleteItemCommand}"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33000000" Width="150"></Button>
         </StackPanel>
-
+       
+        <StackPanel Grid.Column="1" Grid.RowSpan="3" Width="700" Height="700" Margin="0,80,0,0" >
+           <Image Source="../Assets/calander.jpg"></Image>
+        </StackPanel>
 
 
     </Grid>
