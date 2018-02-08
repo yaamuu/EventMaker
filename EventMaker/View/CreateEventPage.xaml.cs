@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using EventMaker.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,11 +33,7 @@ namespace EventMaker.View
             Frame.Navigate(typeof(EventPage));
         }
 
-        private void ButtonBase_OnClick2(object sender, RoutedEventArgs e)
-        {
-            
-            Frame.Navigate(typeof(EventPage));
-        }
+    
 
     }
 }

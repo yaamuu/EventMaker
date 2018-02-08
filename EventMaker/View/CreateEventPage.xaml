@@ -44,7 +44,7 @@
             <TextBlock Text="Time" FontSize="36" FontFamily="Lucida Handwriting" />
             <TimePicker Time="{Binding Time, Mode=TwoWay}" Width="296" HorizontalAlignment="Left" />
 
-            <Button Content="Add" Command="{Binding CreateCommand}" Click="ButtonBase_OnClick2" Margin="0,25,0,15" Width="295" Height="40"/>
+            <Button Content="Add" Command="{Binding CreateCommand}" Margin="0,25,0,15" Width="295" Height="40"/>
             <Button Content="Main Page" Click="ButtonBase_OnClick" Width="295" Height="40"/>
         </StackPanel>
 

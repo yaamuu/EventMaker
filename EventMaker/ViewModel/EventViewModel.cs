@@ -24,7 +24,7 @@ namespace EventMaker.ViewModel
         private ICommand _createEventCommand;
         private Event _selectedItem;
         public RelayCommand DeleteItemCommand { get; set; }
-
+       
         public ICommand CreateEventCommand
         {
             get { return _createEventCommand; }
