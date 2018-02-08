@@ -34,6 +34,7 @@ namespace EventMaker.View
 
         private void ButtonBase_OnClick2(object sender, RoutedEventArgs e)
         {
+            
             Frame.Navigate(typeof(EventPage));
         }
 

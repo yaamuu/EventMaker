@@ -8,6 +8,7 @@ using Windows.UI.Popups;
 using EventMaker.Common;
 using EventMaker.Conventer;
 using EventMaker.Model;
+using EventMaker.View;
 using EventMaker.ViewModel;
 
 
@@ -28,11 +29,20 @@ namespace EventMaker.Handler
         public async void CreateEvent()
         {
             DateTime date = DateTimeConventer.ConverterDateTime(EventViewModel.Date, EventViewModel.Time);
-         
+            if (EventViewModel.Name != null && EventViewModel.Description != null && EventViewModel.Place != null &&
+                EventViewModel.Id.ToString() != null)
+            {
                 EventViewModel.Singleton.EventList.Add(new Event(EventViewModel.Id, EventViewModel.Name,
                     EventViewModel.Description, EventViewModel.Place, date));
+
+            }
+            else
+            {
+               
+                var dialog = new MessageDialog("Please fill all the information");
+                await dialog.ShowAsync();
+            }
            
-            
         }
 
         public void DeleteEvent()
