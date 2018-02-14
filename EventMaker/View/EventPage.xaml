@@ -14,11 +14,11 @@
     </Page.DataContext>
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="../Assets/background1.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="../Assets/static1.squarespace.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="133*"/>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -26,9 +26,13 @@
             <RowDefinition Height="20*"/>
             <RowDefinition Height="2.0*"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding Singleton.EventList}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="52,0.5,0,82" Width="548" Grid.RowSpan="2">
+        <ListView ItemsSource="{Binding Singleton.EventList}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="333,1,0,1" Width="502" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListView.Background>
+                <SolidColorBrush Color="#4C68DD33"/>
+            </ListView.Background>
             <ListView.ItemTemplate>
                 <DataTemplate>
+
                     <StackPanel Orientation="Vertical" Margin="0,0,0,30">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="ID  =" Margin="0,0,128,0" FontFamily="Lucida Handwriting" FontSize="24"/>
@@ -54,14 +58,20 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <StackPanel Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="667,363,0,0" Canvas.ZIndex="1">
-            <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33000000" Width="150" Margin="0,0,0,20"></Button>
-            <Button Content="Delete Event" Command="{Binding DeleteItemCommand}"  VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33000000" Width="150"></Button>
+        <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="667,243,0,0" Canvas.ZIndex="1" Grid.Row="1">
+            <Button Content="Add Event" Click="ButtonBase_OnClick"  VerticalAlignment="Top" HorizontalAlignment="Center"  Width="150" Margin="0,0,0,20">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF68DD33" Opacity="0.699999988079071"/>
+                </Button.Background>
+            </Button>
+            <Button Content="Delete Event" Command="{Binding DeleteItemCommand}"  VerticalAlignment="Top" HorizontalAlignment="Center" Width="150">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF68DD33" Opacity="0.699999988079071"/>
+                </Button.Background>
+            </Button>
         </StackPanel>
-       
-        <StackPanel Grid.Column="1" Grid.RowSpan="3" Width="700" Height="700" Margin="0,80,0,0" >
-           <Image Source="../Assets/calander.jpg"></Image>
-        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="23,70,22,30" Grid.Row="1" />
 
 
     </Grid>

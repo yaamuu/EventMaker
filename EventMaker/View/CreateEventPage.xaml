@@ -10,33 +10,33 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="../Assets/background1.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="../Assets/static1.squarespace.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="131*"/>
-            
-            
+
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="241*"/>
-            <ColumnDefinition Width="1256*"/>
+            <ColumnDefinition Width="647*"/>
+            <ColumnDefinition Width="850*"/>
         </Grid.ColumnDefinitions>
         <Grid.DataContext>
             <ViewModel:EventViewModel/>
         </Grid.DataContext>
-        <StackPanel  Grid.Column="2" Grid.Row="1" Margin="0,0,0,-125" Height="853" VerticalAlignment="Bottom">
+        <StackPanel  Grid.Column="2" Margin="0,0,0,-125" Height="853" VerticalAlignment="Bottom">
             <TextBlock Text="Id" FontSize="36" FontFamily="Lucida Handwriting"/>
-            <TextBox Text="{Binding Id, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" FontFamily="Lucida Handwriting"  />
+            <TextBox Text="{Binding Id, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" FontFamily="Lucida Handwriting" PlaceholderText="ID"  />
 
             <TextBlock Text="Name" FontSize="36" FontFamily="Lucida Handwriting"  />
-            <TextBox Text="{Binding Name, Mode=TwoWay}" Height="40" Width="296"  HorizontalAlignment="Left" FontFamily="Lucida Handwriting"/>
+            <TextBox Text="{Binding Name, Mode=TwoWay}" Height="40" Width="296"  HorizontalAlignment="Left" FontFamily="Lucida Handwriting" PlaceholderText="Name"/>
 
             <TextBlock Text="Description" FontSize="36" FontFamily="Lucida Handwriting"  />
-            <TextBox Text="{Binding Description, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left"  FontFamily="Lucida Handwriting"  />
+            <TextBox Text="{Binding Description, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left"  FontFamily="Lucida Handwriting" PlaceholderText="Description"  />
 
             <TextBlock Text="Place" FontSize="36" FontFamily="Lucida Handwriting"/>
-            <TextBox Text="{Binding Place, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" FontFamily="Lucida Handwriting" />
+            <TextBox Text="{Binding Place, Mode=TwoWay}" Height="40" Width="296" HorizontalAlignment="Left" FontFamily="Lucida Handwriting" PlaceholderText="Place" />
 
             <TextBlock Text="Date" FontSize="36" FontFamily="Lucida Handwriting"  />
             <DatePicker Date="{Binding Date, Mode=TwoWay}" Width="296" HorizontalAlignment="Left"  />
@@ -44,14 +44,20 @@
             <TextBlock Text="Time" FontSize="36" FontFamily="Lucida Handwriting" />
             <TimePicker Time="{Binding Time, Mode=TwoWay}" Width="296" HorizontalAlignment="Left" />
 
-            <Button Content="Add" Command="{Binding CreateCommand}" Margin="0,25,0,15" Width="295" Height="40"/>
-            <Button Content="Main Page" Click="ButtonBase_OnClick" Width="295" Height="40"/>
+            <Button Content="Add" Command="{Binding CreateCommand}" Margin="0,25,0,15" Width="295" Height="40">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF68DD33" Opacity="0.699999988079071"/>
+                </Button.Background>
+            </Button>
+            <Button Content="Main Page" Click="ButtonBase_OnClick" Width="295" Height="40">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF68DD33" Opacity="0.699999988079071"/>
+                </Button.Background>
+            </Button>
         </StackPanel>
 
 
-        <StackPanel Grid.Column="1" Grid.RowSpan="2" Margin="550,82,0,110" Grid.ColumnSpan="2" >
-            <Image Source="../Assets/calander1.jpg" Width="650" Height="650"></Image>
-        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="242,82,0,110" />
 
 
 
